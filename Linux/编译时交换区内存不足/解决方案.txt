@@ -1,0 +1,12 @@
+方法1:
+创建临时分区
+# count的大小就是增加的swap的空间大小,64M是块大小,所以空间大小是bs*count=2048MB
+sudo dd if=/dev/zero of=/swapfile bs=64M count=32
+# 把刚才的空间格式化成swap格式
+chmod 0600 /swapfile
+# 使用刚才创建的swap空间
+sudo swapon /swapfile
+
+方法2:
+增加虚拟机内存,重启后执行释放空间的命令
+swapoff -a
