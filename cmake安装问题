@@ -1,0 +1,4 @@
+安装cmake时遇到 Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the system variablexxxx
+
+解决:
+sudo apt-get install libssl-dev
